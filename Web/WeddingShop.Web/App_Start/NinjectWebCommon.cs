@@ -16,10 +16,17 @@ namespace WeddingShop.Web.App_Start
     using WeddingShop.Data;
     using WeddingShop.Data.Contracts;
     using WeddingShop.Data.EfDbSetWrappers;
+    using WeddingShop.Web.AutoMapping;
 
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
+
+        public static IKernel Kernel
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// Starts the application
@@ -45,18 +52,18 @@ namespace WeddingShop.Web.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
+            Kernel = new StandardKernel();
             try
             {
-                kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
-                kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+                Kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+                Kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
-                RegisterServices(kernel);
-                return kernel;
+                RegisterServices(Kernel);
+                return Kernel;
             }
             catch
             {
-                kernel.Dispose();
+                Kernel.Dispose();
                 throw;
             }
         }
@@ -73,6 +80,8 @@ namespace WeddingShop.Web.App_Start
             kernel.Bind<IUserService>().ToMethod(_ => HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>());
 
             kernel.Bind(typeof(IEfDbSetWrapper<>)).To(typeof(EfDbSetWrapper<>));
+
+            kernel.Bind<IMapperAdapter>().To<MapperAdapter>().InRequestScope();
         }        
     }
 }
