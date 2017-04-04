@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0057D2D1-D1BA-4780-BC0D-DF382E214233}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{3237D608-098F-4EF9-AC78-25B837E88D5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C2C264C5-BFFE-4E4D-A656-B92B6B1B1914}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E1254EE-4CBD-41E5-ACD6-12016402AD2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.Web", "Web\WeddingShop.Web\WeddingShop.Web.csproj", "{D5036514-3FD5-419A-A822-3CDA2C371975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.Auth", "Services\WeddingShop.Auth\WeddingShop.Auth.csproj", "{0F801E43-32F3-4A25-AC70-E4B50FBBB645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.Data.Models", "Data\WeddingShop.Data.Models\WeddingShop.Data.Models.csproj", "{A9A42FF9-CE57-4BEE-A69E-C433F9AADBD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.Data.Contracts", "Data\WeddingShop.Data.Contracts\WeddingShop.Data.Contracts.csproj", "{D6F7CD8D-00F9-44D3-A74D-4C9ACFF31D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.Data", "Data\WeddingShop.Data\WeddingShop.Data.csproj", "{AB619F61-03E6-448B-9FF9-6D6A9B102C78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5036514-3FD5-419A-A822-3CDA2C371975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5036514-3FD5-419A-A822-3CDA2C371975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5036514-3FD5-419A-A822-3CDA2C371975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5036514-3FD5-419A-A822-3CDA2C371975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F801E43-32F3-4A25-AC70-E4B50FBBB645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F801E43-32F3-4A25-AC70-E4B50FBBB645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F801E43-32F3-4A25-AC70-E4B50FBBB645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F801E43-32F3-4A25-AC70-E4B50FBBB645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9A42FF9-CE57-4BEE-A69E-C433F9AADBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9A42FF9-CE57-4BEE-A69E-C433F9AADBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9A42FF9-CE57-4BEE-A69E-C433F9AADBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9A42FF9-CE57-4BEE-A69E-C433F9AADBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F7CD8D-00F9-44D3-A74D-4C9ACFF31D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F7CD8D-00F9-44D3-A74D-4C9ACFF31D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F7CD8D-00F9-44D3-A74D-4C9ACFF31D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F7CD8D-00F9-44D3-A74D-4C9ACFF31D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB619F61-03E6-448B-9FF9-6D6A9B102C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB619F61-03E6-448B-9FF9-6D6A9B102C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB619F61-03E6-448B-9FF9-6D6A9B102C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB619F61-03E6-448B-9FF9-6D6A9B102C78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D5036514-3FD5-419A-A822-3CDA2C371975} = {3237D608-098F-4EF9-AC78-25B837E88D5A}
+		{0F801E43-32F3-4A25-AC70-E4B50FBBB645} = {C2C264C5-BFFE-4E4D-A656-B92B6B1B1914}
+		{A9A42FF9-CE57-4BEE-A69E-C433F9AADBD0} = {0057D2D1-D1BA-4780-BC0D-DF382E214233}
+		{D6F7CD8D-00F9-44D3-A74D-4C9ACFF31D2C} = {0057D2D1-D1BA-4780-BC0D-DF382E214233}
+		{AB619F61-03E6-448B-9FF9-6D6A9B102C78} = {0057D2D1-D1BA-4780-BC0D-DF382E214233}
+	EndGlobalSection
+EndGlobal
