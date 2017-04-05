@@ -1,4 +1,4 @@
-﻿namespace WeddingShop.Web.AutoMapping
+﻿namespace WeddingShop.Web.Common.AutoMapping
 {
     public interface IMapperAdapter
     {

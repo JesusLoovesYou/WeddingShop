@@ -55,6 +55,9 @@
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.Extensions.Conventions.3.2.0.0\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
     </Reference>
@@ -198,17 +201,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\DbConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectModules\Common.cs" />
+    <Compile Include="App_Start\NinjectModules\ServicesNinjectModule.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="AutoMapping\IHaveCustomMappings.cs" />
-    <Compile Include="AutoMapping\IMapFrom.cs" />
-    <Compile Include="AutoMapping\IMapperAdapter.cs" />
-    <Compile Include="AutoMapping\MapperAdapter.cs" />
+    <Compile Include="App_Start\ViewEngineConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -223,6 +225,7 @@
     <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Account\SendCodeViewModel.cs" />
     <Compile Include="ViewModels\Account\VerifyCodeViewModel.cs" />
+    <Compile Include="ViewModels\Article\ArticleViewModel.cs" />
     <Compile Include="ViewModels\Management\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\Management\ChangePasswordViewModel.cs" />
     <Compile Include="ViewModels\Management\ConfigureTwoFactorViewModel.cs" />
@@ -290,6 +293,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -314,6 +318,10 @@
       <Project>{d6f7cd8d-00f9-44d3-a74d-4c9acff31d2c}</Project>
       <Name>WeddingShop.Data.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Data\WeddingShop.Data.Models\WeddingShop.Data.Models.csproj">
+      <Project>{a9a42ff9-ce57-4bee-a69e-c433f9aadbd0}</Project>
+      <Name>WeddingShop.Data.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\WeddingShop.Data\WeddingShop.Data.csproj">
       <Project>{ab619f61-03e6-448b-9ff9-6d6a9b102c78}</Project>
       <Name>WeddingShop.Data</Name>
@@ -321,6 +329,14 @@
     <ProjectReference Include="..\..\Services\WeddingShop.Auth\WeddingShop.Auth.csproj">
       <Project>{0f801e43-32f3-4a25-ac70-e4b50fbbb645}</Project>
       <Name>WeddingShop.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\WeddingShop.DataServises\WeddingShop.DataServises.csproj">
+      <Project>{dbc20311-2790-40c1-baa8-02ec08b065fe}</Project>
+      <Name>WeddingShop.DataServises</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary1\WeddingShop.Web.Common.csproj">
+      <Project>{370249c2-b5d6-4c0c-8f67-51676390fc04}</Project>
+      <Name>WeddingShop.Web.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bytes2you.Validation, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a7d501dd757e0442, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Bytes2you.Validation.2.0.0.0\lib\portable-win+net40+sl40+wp+Xbox40\Bytes2you.Validation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleService.cs" />
+    <Compile Include="Contracts\IArticleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\WeddingShop.Data.Contracts\WeddingShop.Data.Contracts.csproj">
+      <Project>{d6f7cd8d-00f9-44d3-a74d-4c9acff31d2c}</Project>
+      <Name>WeddingShop.Data.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\WeddingShop.Data.Models\WeddingShop.Data.Models.csproj">
+      <Project>{a9a42ff9-ce57-4bee-a69e-c433f9aadbd0}</Project>
+      <Name>WeddingShop.Data.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

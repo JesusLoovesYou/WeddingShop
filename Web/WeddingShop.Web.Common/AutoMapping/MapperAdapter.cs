@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace WeddingShop.Web.AutoMapping
+namespace WeddingShop.Web.Common.AutoMapping
 {
     public class MapperAdapter : IMapperAdapter
     {

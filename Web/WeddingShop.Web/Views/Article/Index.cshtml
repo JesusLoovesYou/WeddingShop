@@ -1,0 +1,15 @@
+﻿@model IEnumerable<WeddingShop.Web.ViewModels.Article.ArticleViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var article in Model)
+{
+    <div>@article.Title</div>
+    <div>@article.Description ?? "(no description)"</div>
+
+    <br />
+    <hr />
+}

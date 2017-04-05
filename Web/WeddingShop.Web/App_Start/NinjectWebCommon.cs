@@ -16,7 +16,8 @@ namespace WeddingShop.Web.App_Start
     using WeddingShop.Data;
     using WeddingShop.Data.Contracts;
     using WeddingShop.Data.EfDbSetWrappers;
-    using WeddingShop.Web.AutoMapping;
+    using WeddingShop.Web.App_Start.NinjectModules;
+    using WeddingShop.Web.Common.AutoMapping;
 
     public static class NinjectWebCommon 
     {
@@ -82,6 +83,8 @@ namespace WeddingShop.Web.App_Start
             kernel.Bind(typeof(IEfDbSetWrapper<>)).To(typeof(EfDbSetWrapper<>));
 
             kernel.Bind<IMapperAdapter>().To<MapperAdapter>().InRequestScope();
+
+            kernel.Load(new ServicesNinjectModule());
         }        
     }
 }

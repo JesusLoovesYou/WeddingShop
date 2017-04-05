@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using WeddingShop.Web.App_Start;
+using WeddingShop.Web.Common.AutoMapping;
 
 namespace WeddingShop.Web
 {
@@ -14,9 +15,7 @@ namespace WeddingShop.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            ViewEngines.Engines.Clear();
-            ViewEngines.Engines.Add(new RazorViewEngine());
+            ViewEngineConfig.RegisterViewEngines(ViewEngines.Engines);
 
             DbConfig.Initialize();
 

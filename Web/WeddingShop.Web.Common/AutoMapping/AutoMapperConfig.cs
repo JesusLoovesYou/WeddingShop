@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Web.Mvc;
-using WeddingShop.Web.AutoMapping;
 
-namespace WeddingShop.Web.App_Start
+namespace WeddingShop.Web.Common.AutoMapping
 {
     public class AutoMapperConfig
     {
