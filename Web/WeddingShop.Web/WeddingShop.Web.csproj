@@ -334,8 +334,8 @@
       <Project>{dbc20311-2790-40c1-baa8-02ec08b065fe}</Project>
       <Name>WeddingShop.DataServises</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary1\WeddingShop.Web.Common.csproj">
-      <Project>{370249c2-b5d6-4c0c-8f67-51676390fc04}</Project>
+    <ProjectReference Include="..\WeddingShop.Web.Common\WeddingShop.Web.Common.csproj">
+      <Project>{aa3311f6-8b43-4b96-887d-d424f57cdf2b}</Project>
       <Name>WeddingShop.Web.Common</Name>
     </ProjectReference>
   </ItemGroup>

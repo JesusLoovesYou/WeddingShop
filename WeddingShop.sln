@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.UnitTests", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.IntegrationTests", "Tests\WeddingShop.IntegrationTests\WeddingShop.IntegrationTests.csproj", "{C1EE4BEB-A73B-466D-A61E-E98594C56703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.Web.Common", "Web\ClassLibrary1\WeddingShop.Web.Common.csproj", "{370249C2-B5D6-4C0C-8F67-51676390FC04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingShop.Web.Common", "Web\WeddingShop.Web.Common\WeddingShop.Web.Common.csproj", "{AA3311F6-8B43-4B96-887D-D424F57CDF2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,10 +67,10 @@ Global
 		{C1EE4BEB-A73B-466D-A61E-E98594C56703}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1EE4BEB-A73B-466D-A61E-E98594C56703}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1EE4BEB-A73B-466D-A61E-E98594C56703}.Release|Any CPU.Build.0 = Release|Any CPU
-		{370249C2-B5D6-4C0C-8F67-51676390FC04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{370249C2-B5D6-4C0C-8F67-51676390FC04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{370249C2-B5D6-4C0C-8F67-51676390FC04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{370249C2-B5D6-4C0C-8F67-51676390FC04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA3311F6-8B43-4B96-887D-D424F57CDF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3311F6-8B43-4B96-887D-D424F57CDF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3311F6-8B43-4B96-887D-D424F57CDF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3311F6-8B43-4B96-887D-D424F57CDF2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +84,6 @@ Global
 		{DBC20311-2790-40C1-BAA8-02EC08B065FE} = {C2C264C5-BFFE-4E4D-A656-B92B6B1B1914}
 		{1C8A5891-B032-4E27-8161-E8C1E9A3951E} = {1E1254EE-4CBD-41E5-ACD6-12016402AD2B}
 		{C1EE4BEB-A73B-466D-A61E-E98594C56703} = {1E1254EE-4CBD-41E5-ACD6-12016402AD2B}
-		{370249C2-B5D6-4C0C-8F67-51676390FC04} = {3237D608-098F-4EF9-AC78-25B837E88D5A}
+		{AA3311F6-8B43-4B96-887D-D424F57CDF2B} = {3237D608-098F-4EF9-AC78-25B837E88D5A}
 	EndGlobalSection
 EndGlobal
