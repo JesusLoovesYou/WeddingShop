@@ -14,6 +14,5 @@ namespace WeddingShop.Web.ViewModels.Article
 
         [AllowHtml]
         public string Description { get; set; }
-
     }
 }
