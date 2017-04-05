@@ -1,4 +1,5 @@
 ﻿using Bytes2you.Validation;
+using System;
 using System.Collections.Generic;
 using WeddingShop.Data.Contracts;
 using WeddingShop.Data.Models;
@@ -22,6 +23,13 @@ namespace WeddingShop.DataServises
             var articles = this.efArticleWrapper.All;
 
             return articles;
+        }
+
+        public Article GetById(Guid id)
+        {
+            var article = this.efArticleWrapper.GetById(id);
+
+            return article;
         }
     }
 }
