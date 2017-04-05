@@ -1,12 +1,9 @@
 ﻿using Bytes2you.Validation;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using WeddingShop.Data.Contracts;
 
 namespace WeddingShop.Data.EfDbSetWrappers
@@ -66,7 +63,7 @@ namespace WeddingShop.Data.EfDbSetWrappers
 
             entry.State = EntityState.Modified;
         }
-
+        
         public void Delete(T entity)
         {
             DbEntityEntry entry = this.efDbContext.Entry(entity);

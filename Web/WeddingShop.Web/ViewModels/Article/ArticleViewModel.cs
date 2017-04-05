@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.Mvc;
 using WeddingShop.Web.Common.AutoMapping;
 
 namespace WeddingShop.Web.ViewModels.Article
@@ -11,6 +12,7 @@ namespace WeddingShop.Web.ViewModels.Article
 
         public string Author { get; set; }
 
+        [AllowHtml]
         public string Description { get; set; }
     }
 }

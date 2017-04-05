@@ -18,13 +18,25 @@ namespace WeddingShop.Web.Controllers
             this.mapper = mapper;
         }
 
-        // GET: Article
+        [HttpGet]
         public ActionResult Index()
         {
             var articles = this.articleService.All();
 
             var model = this.mapper.Map<IEnumerable<ArticleViewModel>>(articles);
 
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(ArticleViewModel model)
+        {
             return View(model);
         }
     }
